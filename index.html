@@ -1,1 +1,86 @@
+<!DOCTYPE html>
 
+<html>
+<head>
+    <title>Astu9 GD Remixes</title>
+
+```
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    input {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    hr {
+        border: 0;
+        border-top: 2px solid black;
+        margin: 30px 0;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>Astu9 GD Remixes</h1>
+
+<input type="text" id="search" placeholder="Search songs..." onkeyup="searchSongs()">
+
+<div class="song">
+    <h2>At The Speed of Light (Astu9 Remix)</h2>
+
+    <audio controls>
+        <source src="songs/At%20The%20Speed%20of%20Light%20(Astu9%20Remix).mp3">
+    </audio>
+
+    <br>
+
+    <a href="songs/At%20The%20Speed%20of%20Light%20(Astu9%20Remix).mp3" download>
+        Download
+    </a>
+</div>
+
+<hr>
+
+<div class="song">
+    <h2>Lost (Xva Remix)-(Astu9 Remix)</h2>
+
+    <audio controls>
+        <source src="songs/Lost%20(Xva%20Remix)-(Astu9%20Remix).mp3">
+    </audio>
+
+    <br>
+
+    <a href="songs/Lost%20(Xva%20Remix)-(Astu9%20Remix).mp3" download>
+        Download
+    </a>
+</div>
+
+<script>
+    function searchSongs() {
+        let search = document.getElementById("search").value.toLowerCase();
+        let songs = document.getElementsByClassName("song");
+
+        for (let song of songs) {
+            let name = song.innerText.toLowerCase();
+
+            if (name.includes(search)) {
+                song.style.display = "block";
+            } else {
+                song.style.display = "none";
+            }
+        }
+    }
+</script>
+```
+
+</body>
+</html>
